@@ -45,7 +45,7 @@
         <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
           <h2 class="font-semibold text-lg mb-2">🖼️ Upload Gallery Image</h2>
           <form id="gallery-form" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/pdf" required class="mb-2 block">
+            <input type="file" name="file" accept="image/*" required class="mb-2 block">
             <input type="text" name="title" placeholder="Image Title" required class="mb-2 block w-full border p-2 rounded">
             <textarea name="description" placeholder="Image Description" required class="mb-2 block w-full border p-2 rounded"></textarea>
             <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">
@@ -53,7 +53,9 @@
             </button>
           </form>
           <div id="gallery-result" class="mt-2 text-sm text-green-600"></div>
-           <!-- Upload Notice Document -->
+        </div>
+
+        <!-- Upload Notice Document -->
         <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
           <h2 class="font-semibold text-lg mb-2">📄 Upload Notice (PDF)</h2>
           <form id="notice-form" enctype="multipart/form-data">
@@ -65,115 +67,7 @@
             </button>
           </form>
           <div id="notice-result" class="mt-2 text-sm text-green-600"></div>
-        </div><!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard – Ujjwal Sr. Sec. School</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100 font-sans">
-
-  <!-- Login Page -->
-  <section id="login-section" class="min-h-screen flex items-center justify-center">
-    <div class="w-full max-w-md p-6 bg-white rounded shadow">
-      <h2 class="text-2xl font-bold text-center mb-6 text-blue-700">Admin Login</h2>
-      <form id="login-form">
-        <div class="mb-4">
-          <label for="username" class="block font-medium mb-1">Username</label>
-          <input type="text" id="username" required class="w-full border border-gray-300 p-2 rounded" />
         </div>
-        <div class="mb-4">
-          <label for="password" class="block font-medium mb-1">Password</label>
-          <input type="password" id="password" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">
-            Login
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
-
-  <!-- Dashboard Page (Hidden initially) -->
-  <section id="dashboard-section" class="hidden min-h-screen">
-    <nav class="bg-blue-900 text-white px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-semibold">Admin Dashboard</div>
-      <button id="logout-btn" class="text-sm hover:underline">Logout</button>
-    </nav>
-
-    <section class="p-6">
-      <h1 class="text-2xl font-bold mb-6">Welcome, Admin</h1>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- View Applications -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h2 class="font-semibold text-lg mb-2">📋 View Applications</h2>
-          <p class="text-sm text-gray-600">Check admission form submissions</p>
-          <a href="#" class="inline-block mt-3 text-blue-600 hover:underline">Open</a>
-        </div>
-        <!-- Upload Notice -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h2 class="font-semibold text-lg mb-2">📰 Upload Notice</h2>
-          <form id="notice-form">
-            <input type="text" placeholder="Notice title" required class="w-full border p-2 rounded mb-2">
-            <textarea placeholder="Notice content" required class="w-full border p-2 rounded mb-2"></textarea>
-            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
-              Upload
-            </button>
-          </form>
-        </div>
-        <!-- Manage Gallery -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h2 class="font-semibold text-lg mb-2">🖼️ Manage Gallery</h2>
-          <form id="gallery-form" enctype="multipart/form-data">
-            <input type="file" accept="image/*" required class="mb-2">
-            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">
-              Upload Image
-            </button>
-            <form id="notice-form" action="/upload-notice" method="POST" enctype="multipart/form-data">
-  <input type="file" name="noticePDF" accept=".pdf" required class="mb-2">
-  <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Upload Documents</button>
-</form>
-
-          </form>
-        </div>
-      </div>
-    </section>
-  </section>
-
-  <!-- Script -->
-  <script>
-    const loginSection = document.getElementById("login-section");
-    const dashboardSection = document.getElementById("dashboard-section");
-    const loginForm = document.getElementById("login-form");
-    const logoutBtn = document.getElementById("logout-btn");
-
-    // Simple client-side auth (for demonstration)
-    loginForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      if (username === "admin" && password === "password") {
-        loginSection.classList.add("hidden");
-        dashboardSection.classList.remove("hidden");
-      } else {
-        alert("Invalid credentials. Try admin / password.");
-      }
-    });
-
-    logoutBtn.addEventListener("click", function () {
-      dashboardSection.classList.add("hidden");
-      loginSection.classList.remove("hidden");
-    });
-  </script>
-</body>
-</html>
-
-        </div>
-
-       
 
       </div>
     </section>
@@ -229,3 +123,4 @@
   </script>
 </body>
 </html>
+
