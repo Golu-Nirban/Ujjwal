@@ -1,126 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Admin Dashboard – Ujjwal Sr. Sec. School</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <title>Admin Panel - Ujjwal School</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0f2f5;
+    }
+
+    .admin-container {
+      max-width: 700px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    label {
+      font-weight: 600;
+      color: #555;
+    }
+
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    .note {
+      font-size: 14px;
+      color: #888;
+      text-align: center;
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
+<body>
+  <div class="admin-container">
+    <h2>Ujjwal School Admin Panel</h2>
+    <form>
+      <label for="title">Upload Title / Description:</label>
+      <input type="text" id="title" placeholder="e.g. New Event Notice">
 
-  <!-- Login Page -->
-  <section id="login-section" class="min-h-screen flex items-center justify-center">
-    <div class="w-full max-w-md p-6 bg-white rounded shadow">
-      <h2 class="text-2xl font-bold text-center mb-6 text-blue-700">Admin Login</h2>
-      <form id="login-form">
-        <div class="mb-4">
-          <label for="username" class="block font-medium mb-1">Username</label>
-          <input type="text" id="username" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
-        <div class="mb-4">
-          <label for="password" class="block font-medium mb-1">Password</label>
-          <input type="password" id="password" required class="w-full border border-gray-300 p-2 rounded" />
-        </div>
-        <div class="text-center">
-          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">
-            Login
-          </button>
-        </div>
-      </form>
-    </div>
-  </section>
+      <label for="file">Select File (Photo or Document):</label>
+      <input type="file" id="file">
 
-  <!-- Dashboard Page (Hidden initially) -->
-  <section id="dashboard-section" class="hidden min-h-screen">
-    <nav class="bg-blue-900 text-white px-6 py-4 flex justify-between items-center">
-      <div class="text-xl font-semibold">Admin Dashboard</div>
-      <button id="logout-btn" class="text-sm hover:underline">Logout</button>
-    </nav>
+      <label for="message">Additional Notes (optional):</label>
+      <textarea id="message" placeholder="Enter any additional notes..."></textarea>
 
-    <section class="p-6">
-      <h1 class="text-2xl font-bold mb-6">Welcome, Admin</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-        <!-- Upload Gallery Image -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h2 class="font-semibold text-lg mb-2">🖼️ Upload Gallery Image</h2>
-          <form id="gallery-form" enctype="multipart/form-data">
-            <input type="file" name="file" accept="image/*" required class="mb-2 block">
-            <input type="text" name="title" placeholder="Image Title" required class="mb-2 block w-full border p-2 rounded">
-            <textarea name="description" placeholder="Image Description" required class="mb-2 block w-full border p-2 rounded"></textarea>
-            <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">
-              Upload Image
-            </button>
-          </form>
-          <div id="gallery-result" class="mt-2 text-sm text-green-600"></div>
-        </div>
-
-        <!-- Upload Notice Document -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h2 class="font-semibold text-lg mb-2">📄 Upload Notice (PDF)</h2>
-          <form id="notice-form" enctype="multipart/form-data">
-            <input type="file" name="file" accept="application/pdf" required class="mb-2 block">
-            <input type="text" name="title" placeholder="Notice Title" required class="mb-2 block w-full border p-2 rounded">
-            <textarea name="description" placeholder="Notice Description" required class="mb-2 block w-full border p-2 rounded"></textarea>
-            <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
-              Upload Notice
-            </button>
-          </form>
-          <div id="notice-result" class="mt-2 text-sm text-green-600"></div>
-        </div>
-
-      </div>
-    </section>
-  </section>
-
-  <!-- Script -->
-  <script>
-    const loginSection = document.getElementById("login-section");
-    const dashboardSection = document.getElementById("dashboard-section");
-    const loginForm = document.getElementById("login-form");
-    const logoutBtn = document.getElementById("logout-btn");
-
-    loginForm.addEventListener("submit", function (e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      if (username === "admin" && password === "password") {
-        loginSection.classList.add("hidden");
-        dashboardSection.classList.remove("hidden");
-      } else {
-        alert("Invalid credentials. Try admin / password.");
-      }
-    });
-
-    logoutBtn.addEventListener("click", function () {
-      dashboardSection.classList.add("hidden");
-      loginSection.classList.remove("hidden");
-    });
-
-    // Upload gallery image
-    document.getElementById("gallery-form").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const res = await fetch("/api/upload", {
-        method: "POST",
-        body: formData
-      });
-      const data = await res.json();
-      document.getElementById("gallery-result").innerText = data.url ? `Uploaded to ${data.url}` : "Upload failed.";
-    });
-
-    // Upload notice
-    document.getElementById("notice-form").addEventListener("submit", async function(e) {
-      e.preventDefault();
-      const formData = new FormData(this);
-      const res = await fetch("/api/upload", {
-        method: "POST",
-        body: formData
-      });
-      const data = await res.json();
-      document.getElementById("notice-result").innerText = data.url ? `Uploaded to ${data.url}` : "Upload failed.";
-    });
-  </script>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+    <p class="note">Only front-end. Backend will be required to handle uploads.</p>
+  </div>
 </body>
 </html>
+
+
 
