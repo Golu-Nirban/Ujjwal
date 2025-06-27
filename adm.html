@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admissions – Ujjwal Sr. Sec. School, Bawania</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans antialiased">
+
+  <!-- Hero -->
+  <section class="relative h-64 bg-cover bg-center" style="background-image: url('https://your-site.com/hero-admissions.jpg');">
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+    <div class="relative z-10 flex items-center justify-center h-full">
+      <h1 class="text-white text-4xl md:text-5xl font-bold">Admissions 2025–26</h1>
+    </div>
+  </section>
+
+  <!-- Admission Overview & Steps -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-semibold mb-6">Admission Process</h2>
+      <ol class="list-decimal list-inside space-y-4 text-lg">
+        <li><strong>Download &amp; fill</strong> the admission form below.</li>
+        <li><strong>Attach required documents:</strong>
+          <ul class="list-disc list-inside ml-6 mt-2 text-base">
+            <li>Birth certificate</li>
+            <li>Last report card</li>
+            <li>One passport-size photo</li>
+          </ul>
+        </li>
+        <li><strong>Submit</strong> the form and documents in person at the school office.</li>
+        <li><strong>Pay the admission fee</strong> at the time of submission.</li>
+        <li><strong>Wait for confirmation</strong> via SMS or email within 5 working days.</li>
+      </ol>
+
+      <div class="mt-8">
+        <a href="/forms/Ujjwal_Admission_Form_2025.pdf" download class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded shadow">
+          Download Admission Form (PDF)
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admission Form Upload -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-lg">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Submit Completed Form</h2>
+      <form action="/submit-admission" method="POST" enctype="multipart/form-data" class="bg-white p-6 rounded shadow">
+        <div class="mb-4">
+          <label class="block mb-1" for="student_name">Student Name</label>
+          <input type="text" id="student_name" name="student_name" required class="w-full border-gray-300 rounded p-2"/>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1" for="parent_name">Parent / Guardian Name</label>
+          <input type="text" id="parent_name" name="parent_name" required class="w-full border-gray-300 rounded p-2"/>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1" for="class_applied">Class Applying For</label>
+          <input type="text" id="class_applied" name="class_applied" required class="w-full border-gray-300 rounded p-2"/>
+        </div>
+        <div class="mb-4">
+          <label class="block mb-1" for="form_file">Upload Filled Form (PDF)</label>
+          <input type="file" id="form_file" name="form_file" accept="application/pdf" required class="w-full"/>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded font-medium">Submit Application</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Important Dates -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 max-w-xl">
+      <h2 class="text-3xl font-semibold mb-4">Important Dates</h2>
+      <ul class="space-y-2 text-lg">
+        <li><strong>Admission Starts:</strong> April 1, 2025</li>
+        <li><strong>Last Date to Submit Form:</strong> July 31, 2025</li>
+       
+        
+        <li><strong>Orientation Day:</strong> August 1, 2025</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer (reuse from homepage) -->
+  <footer class="bg-blue-900 text-white py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ujjwal Sr. Sec. School</h3>
+        <p>Bawania, Haryana</p>
+        <p>📞 +91‑9467258700,9466315271</p>
+        <p>📧 info@ujjwalschool.com</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+        <ul>
+          <li><a href="/admission.html" class="hover:underline">Admissions</a></li>
+          <li><a href="#important-dates" class="hover:underline">Important Dates</a></li>
+          <li><a href="/contact.html" class="hover:underline">Contact Us</a></li>
+          <li><a href="/gallery.html" class="hover:underline">Gallery</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Follow Us</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="#" aria-label="Facebook" class="hover:text-blue-300">👍</a>
+          <a href="#" aria-label="Twitter" class="hover:text-blue-300">🐦</a>
+          <a href="https://www.instagram.com/ujjwalschool/" aria-label="Instagram" class="hover:text-blue-300">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300">
+      &copy; 2025 Ujjwal Sr. Sec. School, Bawania. All Rights Reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
