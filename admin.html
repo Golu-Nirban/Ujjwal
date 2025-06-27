@@ -2,21 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Admin Panel - Ujjwal School</title>
+  <title>Admin Login - Ujjwal School</title>
   <style>
     body {
-      margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #f0f2f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
     }
 
-    .admin-container {
-      max-width: 700px;
-      margin: 50px auto;
+    .container {
+      width: 100%;
+      max-width: 500px;
       background: #fff;
       padding: 30px;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
     }
 
     h2 {
@@ -30,14 +34,10 @@
       gap: 15px;
     }
 
-    label {
-      font-weight: 600;
-      color: #555;
-    }
-
     input[type="text"],
-    textarea,
-    input[type="file"] {
+    input[type="password"],
+    input[type="file"],
+    textarea {
       padding: 10px;
       border: 1px solid #ccc;
       border-radius: 6px;
@@ -49,7 +49,7 @@
       height: 100px;
     }
 
-    .submit-btn {
+    .btn {
       background-color: #007bff;
       color: white;
       padding: 12px;
@@ -57,11 +57,19 @@
       border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
-      transition: background-color 0.3s;
     }
 
-    .submit-btn:hover {
+    .btn:hover {
       background-color: #0056b3;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .error {
+      color: red;
+      text-align: center;
     }
 
     .note {
@@ -72,22 +80,53 @@
   </style>
 </head>
 <body>
-  <div class="admin-container">
-    <h2>Ujjwal School Admin Panel</h2>
-    <form>
-      <label for="title">Upload Title / Description:</label>
-      <input type="text" id="title" placeholder="e.g. New Event Notice">
+  <div class="container">
+    <!-- Login Form -->
+    <div id="loginForm">
+      <h2>Admin Login</h2>
+      <div id="errorMsg" class="error"></div>
+      <form onsubmit="return checkLogin()">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit" class="btn">Login</button>
+      </form>
+    </div>
 
-      <label for="file">Select File (Photo or Document):</label>
-      <input type="file" id="file">
+    <!-- Admin Upload Panel -->
+    <div id="adminPanel" class="hidden">
+      <h2>Welcome, Admin</h2>
+      <form>
+        <label for="title">Upload Title / Description:</label>
+        <input type="text" id="title" placeholder="e.g. New Event Notice">
 
-      <label for="message">Additional Notes (optional):</label>
-      <textarea id="message" placeholder="Enter any additional notes..."></textarea>
+        <label for="file">Select File (Photo or Document):</label>
+        <input type="file" id="file">
 
-      <button type="submit" class="submit-btn">Submit</button>
-    </form>
-    <p class="note">Only front-end. Backend will be required to handle uploads.</p>
+        <label for="message">Additional Notes (optional):</label>
+        <textarea id="message" placeholder="Enter any additional notes..."></textarea>
+
+        <button type="submit" class="btn">Upload</button>
+      </form>
+      <p class="note">Note: This is frontend only. Add backend to save files.</p>
+    </div>
   </div>
+
+  <script>
+    function checkLogin() {
+      const username = document.getElementById('username').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const errorMsg = document.getElementById('errorMsg');
+
+      if (username === 'Ujjwal' && password === 'Golu@123') {
+        document.getElementById('loginForm').classList.add('hidden');
+        document.getElementById('adminPanel').classList.remove('hidden');
+        return false; // prevent form reload
+      } else {
+        errorMsg.textContent = "Invalid username or password!";
+        return false;
+      }
+    }
+  </script>
 </body>
 </html>
 
