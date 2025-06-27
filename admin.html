@@ -65,6 +65,11 @@
             <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">
               Upload Image
             </button>
+            <form id="notice-form" action="/upload-notice" method="POST" enctype="multipart/form-data">
+  <input type="file" name="noticePDF" accept=".pdf" required class="mb-2">
+  <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded">Upload Documents</button>
+</form>
+
           </form>
         </div>
       </div>
