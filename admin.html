@@ -46,6 +46,8 @@
           <h2 class="font-semibold text-lg mb-2">🖼️ Upload Gallery Image</h2>
           <form id="gallery-form" enctype="multipart/form-data">
             <input type="file" name="file" accept="image/*" required class="mb-2 block">
+            <input type="text" name="title" placeholder="Image Title" required class="mb-2 block w-full border p-2 rounded">
+            <textarea name="description" placeholder="Image Description" required class="mb-2 block w-full border p-2 rounded"></textarea>
             <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded">
               Upload Image
             </button>
@@ -58,6 +60,8 @@
           <h2 class="font-semibold text-lg mb-2">📄 Upload Notice (PDF)</h2>
           <form id="notice-form" enctype="multipart/form-data">
             <input type="file" name="file" accept="application/pdf" required class="mb-2 block">
+            <input type="text" name="title" placeholder="Notice Title" required class="mb-2 block w-full border p-2 rounded">
+            <textarea name="description" placeholder="Notice Description" required class="mb-2 block w-full border p-2 rounded"></textarea>
             <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">
               Upload Notice
             </button>
