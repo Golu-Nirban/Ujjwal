@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Science Lab – Ujjwal Sr. Sec. School</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-height: 80%;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero Banner -->
+  <section class="relative h-64 bg-green-700 text-white flex items-center justify-center">
+    <h1 class="text-4xl font-bold">Our Science Lab</h1>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Explore, Experiment, Excel!</h2>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        At Ujjwal Sr. Sec. School, our Science Lab is a hub of curiosity and innovation. Designed for Physics, Chemistry, and Biology practicals, our lab offers modern equipment and a safe environment for young scientists to learn through hands-on experience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Equipment & Facilities -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8 text-center text-green-800">Lab Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Modern Equipment</h3>
+          <p>Beakers, microscopes, test tubes, and lab kits for real-world science.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Separate Sections</h3>
+          <p>Dedicated Physics, Chemistry & Biology corners for focused learning.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Safety First</h3>
+          <p>Supervised labs with safety gear, fire extinguishers, and first aid.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-green-800 mb-8">Science Lab in Action</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.Ry_sI4NjnH-mXs-KHwSbYAHaFj?pid=Api&P=0&h=180" alt="Lab photo 1" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        <img src=" https://tse3.mm.bing.net/th/id/OIP.M4t4CUN6AKUIM9VcFyv74gHaEK?pid=Api&P=0&h=180" alt="Lab photo 2" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.NMhQ7ars3hVe4zYZe_94ZgHaEc?pid=Api&P=0&h=180" alt="Lab photo 3" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        <img src="https://tse3.mm.bing.net/th/id/OIP.UdTvF_v3MY6ByOWjK8Zq7AAAAA?pid=Api&P=0&h=180" alt="Lab photo 4" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox viewer -->
+  <div id="lightbox" class="lightbox flex" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ujjwal Sr. Sec. School</h3>
+        <p>Bawania, Mahendragarh, Haryana – 123034</p>
+        <p>📞 +91‑9467258700, 9466315271</p>
+        <p>📧 info@@ujjwalbawania@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+        <ul>
+          <li><a href="/index.html" class="hover:underline">Home</a></li>
+          <li><a href="/about.html" class="hover:underline">About Us</a></li>
+          <li><a href="/contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Social Media</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://www.facebook.com/Ujjwalschool1/" aria-label="Facebook" class="hover:text-green-300">👍</a>
+          <a href="#" aria-label="Twitter" class="hover:text-green-300">🐦</a>
+          <a href="https://www.instagram.com/ujjwalschool/" class="hover:text-green-300">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300">
+      &copy; 2025 Ujjwal Sr. Sec. School. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript for Lightbox -->
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
