@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sports & Games – Ujjwal Sr. Sec. School</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero -->
+  <section class="h-64 bg-green-700 text-white flex items-center justify-center">
+    <h1 class="text-4xl font-bold">Sports & Games</h1>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4 text-green-700">Nurturing Health & Team Spirit</h2>
+      <p class="max-w-3xl mx-auto text-lg">
+        At Ujjwal Sr. Sec. School, we believe that a healthy body leads to a healthy mind. Our sports program focuses on discipline, team spirit, and physical fitness. We offer both indoor and outdoor facilities to help students excel in various games and athletic activities.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sports Offered -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold text-center text-green-700 mb-8">Major Sports We Offer</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">🏏 Cricket</h3>
+          <p>Dedicated pitch and coaching to develop budding cricketers.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">⚽ Football</h3>
+          <p>Spacious grounds for regular practice and inter-school matches.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">🏸 Badminton</h3>
+          <p>Indoor and outdoor courts with coaching sessions.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">🏃 Athletics</h3>
+          <p>Running track and field activities that promote endurance and strength.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">♟️ Chess</h3>
+          <p>Training young minds in strategic thinking and patience.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">🏐 Volleyball</h3>
+          <p>Energetic matches and practice sessions on a dedicated court.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-green-700 mb-8">Glimpses of Sports at Ujjwal</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://ujjwalschoolbawania.wordpress.com/wp-content/uploads/2021/04/dsc_0759.jpg?w=2046" alt="Sports Image 1"  class="rounded shadow-md cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)">
+         <img src="https://ujjwalschoolbawania.wordpress.com/wp-content/uploads/2021/04/img-20191114-wa0070-1.jpg" alt="Sports Image 2" class="rounded shadow-md cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)">
+        <h>National Level Champions</h>
+         <img src="https://ujjwalschoolbawania.wordpress.com/wp-content/uploads/2021/04/whatsapp-image-2021-04-23-at-5.32.30-pm.jpeg" alt="Sports Image 3" class="rounded shadow-md cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)">
+       </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox flex" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-green-900 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ujjwal Sr. Sec. School</h3>
+        <p>Bawania, Mahendragarh, Haryana – 123034</p>
+        <p>📞 +91‑9467258700, 9466315271</p>
+        <p>📧 info@ujjwalbawania@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+        <ul>
+          <li><a href="/index.html" class="hover:underline">Home</a></li>
+          <li><a href="/about.html" class="hover:underline">About Us</a></li>
+          <li><a href="/contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Follow Us</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://www.facebook.com/Ujjwalschool1/" class="hover:text-green-300">👍</a>
+          <a href="#" class="hover:text-green-300">🐦</a>
+          <a href="https://www.instagram.com/ujjwalschool/" class="hover:text-green-300">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300">
+      &copy; 2025 Ujjwal Sr. Sec. School. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
