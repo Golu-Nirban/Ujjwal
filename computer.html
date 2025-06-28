@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Computer Lab – Ujjwal Sr. Sec. School</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-height: 80%;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="relative h-64 bg-blue-700 text-white flex items-center justify-center">
+    <h1 class="text-4xl font-bold">Our Computer Lab</h1>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">Empowering Digital Learning</h2>
+      <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+        At Ujjwal Sr. Sec. School, our Computer Lab provides students with hands-on experience in technology, coding, and digital literacy. Equipped with high-speed internet, modern desktops, and updated software, it supports practical learning in a digital environment.
+      </p>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold mb-8 text-center text-blue-800">Lab Highlights</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Latest Computers</h3>
+          <p>High-performance systems with updated software for smooth learning.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Coding & Software Training</h3>
+          <p>Basic to advanced training in Scratch, Python, MS Office, and more.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-lg transition rounded">
+          <h3 class="text-xl font-semibold mb-2">Internet Access</h3>
+          <p>Fast and secure connectivity for research, projects, and e-learning.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-blue-800 mb-8">Inside the Lab</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.3YgWJnZKxgsTGdByrDH5lAHaE8?pid=Api&P=0&h=180" alt="Computer Lab 1" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        <img src="https://tse4.mm.bing.net/th/id/OIP.LhSxaGiZC4x_enSNj7ySzwHaEK?pid=Api&P=0&h=180" alt="Computer Lab 2" class="rounded shadow-md cursor-pointer hover:scale-105 transform transition duration-300" onclick="openLightbox(this.src)">
+        
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox flex" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Preview">
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ujjwal Sr. Sec. School</h3>
+        <p>Bawania, Mahendragarh, Haryana – 123034</p>
+        <p>📞 +91‑9467258700, 9466315271</p>
+        <p>📧 info@@ujjwalbawania@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Quick Links</h3>
+        <ul>
+          <li><a href="/index.html" class="hover:underline">Home</a></li>
+          <li><a href="/about.html" class="hover:underline">About Us</a></li>
+          <li><a href="/contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Connect With Us</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://www.facebook.com/Ujjwalschool1/" class="hover:text-blue-300">👍</a>
+          <a href="#" class="hover:text-blue-300">🐦</a>
+          <a href="https://www.instagram.com/ujjwalschool/" class="hover:text-blue-300">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300">
+      &copy; 2025 Ujjwal Sr. Sec. School. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript for Lightbox -->
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
