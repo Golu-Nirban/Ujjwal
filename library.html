@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Library – Ujjwal Sr. Sec. School</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.9);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    .lightbox img {
+      max-height: 90%;
+      max-width: 90%;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+  <!-- Hero Section -->
+  <section class="h-64 bg-yellow-600 text-white flex items-center justify-center">
+    <h1 class="text-4xl font-bold">Our School Library</h1>
+  </section>
+
+  <!-- About Library -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-semibold mb-4">A World of Knowledge</h2>
+      <p class="max-w-3xl mx-auto text-lg">
+        At Ujjwal Sr. Sec. School, our well-stocked library is a treasure trove of knowledge designed to foster a love for reading and research. From academic references to children’s literature, students have access to a wide range of physical and digital resources.
+      </p>
+    </div>
+  </section>
+
+  <!-- Library Highlights -->
+  <section class="py-12 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-2xl font-bold text-center text-yellow-700 mb-8">Library Features</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">Thousands of Books</h3>
+          <p>Spanning fiction, reference, science, biographies, and encyclopedias.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">Reading & Study Zone</h3>
+          <p>Quiet, comfortable environment for students to read and study.</p>
+        </div>
+        <div class="bg-white p-6 shadow hover:shadow-xl rounded transition">
+          <h3 class="text-xl font-semibold mb-2">Digital Resources</h3>
+          <p>Includes educational CDs, magazines, and online access tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold text-yellow-700 mb-8">Explore Our Library</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <img src="https://i.pinimg.com/originals/d3/30/b9/d330b920ce47ac9ce81320d62b4df0cc.jpg" alt="Library 1" class="rounded shadow-md cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)">
+        <img src="https://tse1.mm.bing.net/th/id/OIP.UmU3wL--3kKuzizQ9CBn4AHaFi?pid=Api&P=0&h=180" alt="Library 2" class="rounded shadow-md cursor-pointer hover:scale-105 transition" onclick="openLightbox(this.src)">
+        </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox flex" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Library Preview">
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-yellow-800 text-white py-8 mt-12">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Ujjwal Sr. Sec. School</h3>
+        <p>Bawania, Mahendragarh, Haryana – 123034</p>
+        <p>📞 +91‑9467258700, 9466315271</p>
+        <p>📧 info@@ujjwalbawania@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Useful Links</h3>
+        <ul>
+          <li><a href="/index.html" class="hover:underline">Home</a></li>
+          <li><a href="/about.html" class="hover:underline">About Us</a></li>
+          <li><a href="/contact.html" class="hover:underline">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3 class="text-xl font-semibold mb-2">Social Media</h3>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://www.facebook.com/Ujjwalschool1/" class="hover:text-yellow-300">👍</a>
+          <a href="#" class="hover:text-yellow-300">🐦</a>
+          <a href="https://www.instagram.com/ujjwalschool/" class="hover:text-yellow-300">📸</a>
+        </div>
+      </div>
+    </div>
+    <div class="mt-8 text-center text-sm text-gray-300">
+      &copy; 2025 Ujjwal Sr. Sec. School. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    function openLightbox(src) {
+      document.getElementById("lightbox-img").src = src;
+      document.getElementById("lightbox").style.display = "flex";
+    }
+    function closeLightbox() {
+      document.getElementById("lightbox").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
