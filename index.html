@@ -5,6 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ujjwal Sr. Sec. School, Bawania</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+<style>
+    /* Container for dropdown */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown button */
+    .dropbtn {
+      background-color: #2c41ab;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+
+    /* Dropdown links */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Hover effects */
+    .dropdown-content a:hover {
+      background-color: #309978;
+    }
+
+    /* Show the dropdown on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+      background-color: #589de2;
+    }
+
+    .dropdown:hover .dropbtn {
+      background-color: #2c41ab;
+    }
+  </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
   <nav class="bg-blue-800 text-white px-6 py-4 flex justify-between">
@@ -13,6 +63,41 @@
     <a href="index.html">Home</a>
     <a href="adm.html">Admissions</a>
     <a href="acad.html">Academic Calendar</a>
+    <div class="dropdown">
+    <button class="dropbtn">Facilities</button>
+    <div class="dropdown-content">
+      <a href="#">Science Lab</a>
+      <a href="#">Computer Lab</a>
+      <a href="#">Library</a>
+      <a href="#">Our Vision</a>
+      <a href="#">Sports and Game</a>
+      <a href="#">Medical Room</a>
+      <a href="#">Activity Room</a>
+    </div>
+  </div>
+     <div class="dropdown">
+    <button class="dropbtn">Mandatory Disclosure</button>
+    <div class="dropdown-content">
+      <a href="#">Affiliation Certificate</a>
+      <a href="#">Building safety</a>
+      <a href="#">Details Of Class Room</a>
+      <a href="#">Fire Certificate</a>
+      <a href="#">Land Certificate</a>
+      <a href="#">Fee Structure</a>
+      <a href="#">Result Last 3 Year</a>
+      <a href="#">NOC</a>
+      <a href="#">Recogination certificate</a>
+      <a href="#">SMC</a>
+      <a href="#">Society Registration</a>
+      <a href="#">Staff Statement</a>
+      <a href="#">Class Wise Student Streangth</a>
+      <a href="#">Water and Sanitary</a>
+      <a href="#">NON PROPRIETARY Certificate</a>
+      <a href="#">DEO Certificate</a>
+      <a href="#">PTA</a>
+      <a href="#">Water Sample Testing report</a>
+    </div>
+  </div>
     <a href="contact.html">Contact</a>
     <a href="admin.html">Admin Login</a> <!-- 🔗 Link to Admin Page -->
   </div>
@@ -23,13 +108,7 @@
   <section class="relative h-screen bg-cover bg-center" style="background-image:url('https://i0.wp.com/ujjwalschoolbawania.wordpress.com/wp-content/uploads/2021/04/picsart_04-24-01.00.16.jpg?fit=1200%2C800&ssl=1&w=640');">
   <!-- Hero using first real image -->
 
-    <div class="absolute inset-0 bg-black opacity-50"></div>
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
-      <h1 class="text-5xl md:text-6xl font-bold mb-4">Ujjwal Sr. Sec. School, Bawania</h1>
-      <p class="text-xl md:text-2xl mb-6">Empowering Today’s Students for Tomorrow’s Challenges</p>
-      <a href="#about" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 rounded text-lg font-semibold">Learn More</a>
-    </div>
-  </section>
+
 
   <!-- Quick Links -->
   <section class="py-12 bg-white">
