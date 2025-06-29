@@ -5,24 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Ujjwal Sr. Sec. School, Bawania</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-<style>
-    /* Container for dropdown */
+  <style>
     .dropdown {
       position: relative;
       display: inline-block;
     }
-
-    /* Dropdown button */
     .dropbtn {
-      
       color: white;
       padding: 10px 20px;
       font-size: 16px;
       border: none;
       cursor: pointer;
     }
-
-    /* Dropdown content (hidden by default) */
     .dropdown-content {
       display: none;
       position: absolute;
@@ -31,105 +25,113 @@
       box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
       z-index: 1;
     }
-
-    /* Dropdown links */
     .dropdown-content a {
       color: black;
       padding: 12px 16px;
       text-decoration: none;
       display: block;
     }
-
-    /* Hover effects */
     .dropdown-content a:hover {
       background-color: #309978;
     }
-
-    /* Show the dropdown on hover */
     .dropdown:hover .dropdown-content {
       display: block;
       background-color: #589de2;
     }
-
     .dropdown:hover .dropbtn {
       background-color: #2c41ab;
+    }
+    @media (max-width: 768px) {
+      .dropdown {
+        width: 100%;
+      }
+      .dropdown-content {
+        position: static;
+        width: 100%;
+      }
+      nav div.space-x-6 {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
 <body class="font-sans antialiased text-gray-800">
-  <nav class="bg-blue-800 text-white px-6 py-4 flex justify-between">
-  <div class="font-bold text-xl">Ujjwal Sr. Sec. School</div>
-  <div class="space-x-6">
-    <a href="index.html">Home</a>
-    <a href="adm.html">Admissions</a>
 
-     <div class="dropdown">
-    <button class="dropbtn">Academics</button>
-    <div class="dropdown-content">
-      <a href="acad.html">Academic Calender</a>
-      <a href="#">Faculty</a>
-      <a href="#">Class 10th Result</a>
-      <a href="#">Class 12th Result</a>
-      <a href="about.html">About Us</a>
-    </div>
-  </div>
-    <div class="dropdown">
-    <button class="dropbtn">Achievements</button>
-    <div class="dropdown-content">
-      
-      <a href="#">Neet</a>
-      <a href="#">JEE Mains and Advance</a>
-      <a href="sports.html">Sports</a>
-      <a href="#">Selections</a>
-    </div>
-  </div>
-
-    <div class="dropdown">
-    <button class="dropbtn">Facilities</button>
-    <div class="dropdown-content">
-      <a href="science.html">Science Lab</a>
-      <a href="computer.html">Computer Lab</a>
-      <a href="library.html">Library</a>
-      <a href="sports.html">Sports and Game</a>
-      
-    </div>
-  </div>
-     <div class="dropdown">
-    <button class="dropbtn">Mandatory Disclosure</button>
-    <div class="dropdown-content">
-      <a href="#">Affiliation Certificate</a>
-      <a href="#">Building safety</a>
-      <a href="#">Details Of Class Room</a>
-      <a href="#">Fire Certificate</a>
-      <a href="#">Land Certificate</a>
-      <a href="#">Fee Structure</a>
-      <a href="#">Result Last 3 Year</a>
-      <a href="#">NOC</a>
-      <a href="#">Recogination certificate</a>
-      <a href="#">SMC</a>
-      <a href="#">Society Registration</a>
-      <a href="#">Staff Statement</a>
-      <a href="#">Class Wise Student Streangth</a>
-      <a href="#">Water and Sanitary</a>
-      <a href="#">NON PROPRIETARY Certificate</a>
-      <a href="#">DEO Certificate</a>
-      <a href="#">PTA</a>
-      <a href="#">Water Sample Testing report</a>
-    </div>
-  </div>
-    <a href="contact.html">Contact</a>
-    <a href="admin.html">Admin Login</a> <!-- 🔗 Link to Admin Page -->
-  </div>
-</nav>
+  <!-- Responsive Navigation Bar -->
+  <nav class="bg-blue-800 text-white px-6 py-4 flex flex-col md:flex-row justify-between items-start md:items-center">
+    <h1 class="text-6xl md:text-5xl font-extrabold text-white-700 hover:text-blue-900 transition duration-300 ease-in-out cursor-pointer">
+  Ujjwal Sr. Sec. School
+</h1>
 
 
-  <!-- Hero Section -->
+    <div class="flex flex-col md:flex-row md:space-x-6 space-y-2 md:space-y-0">
+      <a href="index.html">Home</a>
+      <a href="adm.html">Admissions</a>
+
+      <!-- Dropdowns for different sections -->
+      <div class="dropdown">
+        <button class="dropbtn">Academics</button>
+        <div class="dropdown-content">
+          <a href="acad.html">Academic Calender</a>
+          <a href="faculty.html">Faculty</a>
+          <a href="result_10th.html">Class 10th Result</a>
+          <a href="result_12th.html">Class 12th Result</a>
+          <a href="about.html">About Us</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Achievements</button>
+        <div class="dropdown-content">
+         
+          <a href="neet.html">NEET,JEE Mains and Advance</a>
+          <a href="sports.html">Sports</a>
+          <a href="#">Selections</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Facilities</button>
+        <div class="dropdown-content">
+          <a href="science.html">Science Lab</a>
+          <a href="computer.html">Computer Lab</a>
+          <a href="library.html">Library</a>
+          <a href="sports.html">Sports and Game</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropbtn">Mandatory Disclosure</button>
+        <div class="dropdown-content">
+          <a href="affilation.html">Affiliation Certificate</a>
+          <a href="building_safety.html">Building safety</a>
+          <a href="classroom_detail.html">Details Of Class Room</a>
+          <a href="fire_certificate.html">Fire Certificate</a>
+          <a href="land_certificate.html">Land Certificate</a>
+          <a href="fee_structure.html">Fee Structure</a>
+          <a href="result.html">Result Last 3 Year</a>
+          <a href="noc.html">NOC</a>
+          <a href="recognition.html">Recogination certificate</a>
+          <a href="smc.html">SMC</a>
+          <a href="society.html">Society Registration</a>
+          <a href="staff.html">Staff Statement</a>
+          <a href="class_student.html">Class Wise Student Streangth</a>
+          <a href="sanitory.html">Water and Sanitary</a>
+          <a href="non.html">NON PROPRIETARY Certificate</a>
+          <a href="deo.html">DEO Certificate</a>
+          <a href="pta.html">PTA</a>
+          <a href="water_testing.html">Water Sample Testing report</a>
+        </div>
+      </div>
+      <a href="contact.html">Contact</a>
+      <a href="admin.html">Admin Login</a>
+    </div>
+  </nav>
+
+  <!-- Hero Banner -->
   <section class="relative h-screen bg-cover bg-center" style="background-image:url('https://i0.wp.com/ujjwalschoolbawania.wordpress.com/wp-content/uploads/2021/04/picsart_04-24-01.00.16.jpg?fit=1200%2C800&ssl=1&w=640');">
-  <!-- Hero using first real image -->
+    <p></p>
+  </section>
 
-
-
-  <!-- Quick Links -->
+  <!-- Quick Access Tiles -->
   <section class="py-12 bg-white">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
@@ -153,7 +155,7 @@
     </div>
   </section>
 
-  <!-- Notices / News -->
+  <!-- News & Notices -->
   <section class="py-12 bg-gray-100">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-6 text-center">Latest News & Notices</h2>
@@ -166,12 +168,11 @@
           <a href="#" class="text-blue-700 font-semibold">Annual Sports Day – July 15</a>
           <p class="text-sm text-gray-600">June 15, 2025</p>
         </li>
-       
       </ul>
     </div>
   </section>
 
-  <!-- About School -->
+  <!-- About Section -->
   <section id="about" class="py-16 bg-white">
     <div class="container mx-auto px-4 text-center md:text-left">
       <div class="md:flex md:items-center md:space-x-10">
@@ -221,3 +222,4 @@
 
 </body>
 </html>
+
